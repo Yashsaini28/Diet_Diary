@@ -1,0 +1,51 @@
+{%extends 'base.html'%}
+{% block body_block%}
+
+
+
+ <p><h3>Your Purchase History</h3></p>
+    
+          <div class="section-title" style="margin-top:2.8em ;">
+    <table class="table table-striped">
+        <thead>
+          <tr>
+            
+            <th scope="col">Date</th>
+            <th scope="col">Time_rec</th>
+            <th scope="col">Quantity</th>
+            <th scope="col">Mfg_Code</th>
+            <th scope="col">Food_name</th>
+            <th scope="col">Carbs</th>
+            <th scope="col">Protein</th>
+            <th scope="col">Fat</th>
+            <th scope="col">Fiber</th>
+            <th scope="col">Sugar</th>
+            <th scope="col">Calorie</th>
+
+          </tr>
+        </thead>
+        <tbody>
+            {% for b in dfz.itertuples %}
+            <tr>
+        <td>{{ b.date}}</td>
+            <td>{{b.time_rec}}</td>
+            <td>{{b.quantity}}</td>
+            <td>{{b.mfg_code}}</td>
+            <td>{{b.food_name}}</td>
+            <td>{{b.carbs}}</td>
+            <td>{{b.protein}}</td>
+            <td>{{b.fat}}</td>
+            <td>{{b.fiber}}</td>
+            <td>{{b.sugar}}</td>
+            <td>{{b.calorie}}</td>
+            
+        </tr>
+          {% endfor %} 
+         
+        </tbody>
+      </table>
+      </div>
+      
+      {%endblock%}
+
+

@@ -1,0 +1,42 @@
+{%extends 'base.html'%}
+{% block body_block%}
+
+
+
+ <p><h3>Your Consumed History</h3></p>
+    
+          <div class="section-title" style="margin-top:2.8em ;">
+    <table class="table table-striped">
+        <thead>
+          <tr>
+            
+            <th scope="col">Food_name</th>
+            <th scope="col">Date</th>
+            <th scope="col">Time</th>
+            <th scope="col">Quantity</th>
+            <th scope="col">Calorie</th>
+            <th scope="col">Meal_type</th>
+           
+
+          </tr>
+        </thead>
+        <tbody>
+            {% for b in user_log.itertuples %}
+            <tr>
+       
+            <td>{{b.food_name}}</td>
+            <td>{{b.date}}</td>
+            <td>{{b.time}}</td>
+            <td>{{b.quantity}}</td>
+            <td>{{b.calorie}}</td>
+            <td>{{b.meal_type}}</td>
+        </tr>
+          {% endfor %} 
+         
+        </tbody>
+      </table>
+      </div>
+      
+      {%endblock%}
+
+

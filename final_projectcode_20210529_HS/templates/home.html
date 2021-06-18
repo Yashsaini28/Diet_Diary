@@ -1,0 +1,31 @@
+{%extends 'base.html'%}
+{% block body_block%}
+<div class="container">
+    <div class="jumbotron my-3">
+      <h1 class="display-4">Food Types</h1>
+      <p class="lead">Choose your food type</p>
+      <hr class="my-4">
+      </div>
+    </div>
+    <h2>Popular Food</h2>
+    <div class="container">
+     
+      <div class="row no-gutters border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 my-4 position-relative">
+              <div class="col p-4 d-flex flex-column position-static">
+                
+                <h3 class="mb-0">Food Items</h3>
+                <p class="card-text mb-auto">Food Items coming from food master table of PAN Health.</p>
+              <div class='my-2'>
+              
+               <a href="{%url 'basic_app_new:north'%}"><button class='btn btn-primary'>Click</button></a>
+              </div>
+            </div>
+         <div class="col-auto d-none d-lg-block">
+          <svg width="250" height="250"
+          xmlns="http://www.w3.org/2000/svg">
+          <image href="https://www.livemorezone.com/wp-content/uploads/north-indian-food-livemorezone-dbs.jpg" height="250" width="250"/>
+        </svg>                
+      </div>     
+            </div >
+           
+{%endblock%}
